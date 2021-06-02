@@ -25,12 +25,19 @@ namespace LineComparisionProblems
         }
         private void Compare2Lengths(double LengthOfLine1, double LengthOfLine2)
         {
-            if (LengthOfLine1 == LengthOfLine2)
-                Console.WriteLine($"Length of line1 {LengthOfLine1} is equal to Length of Line2 {LengthOfLine2}");
-            else if (LengthOfLine1 > LengthOfLine2)
-                Console.WriteLine($"Length of line1 {LengthOfLine1} is greater than Length of Line2 {LengthOfLine2}");
-            else
-                Console.WriteLine($"Length of line1 {LengthOfLine1} is less than Length of Line2 {LengthOfLine2}");
+            try
+            {
+                if (LengthOfLine1 == LengthOfLine2)
+                    Console.WriteLine($"Length of line1 {LengthOfLine1} is equal to Length of Line2 {LengthOfLine2}");
+                else if (LengthOfLine1 > LengthOfLine2)
+                    Console.WriteLine($"Length of line1 {LengthOfLine1} is greater than Length of Line2 {LengthOfLine2}");
+                else
+                    Console.WriteLine($"Length of line1 {LengthOfLine1} is less than Length of Line2 {LengthOfLine2}");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

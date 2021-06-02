@@ -18,16 +18,24 @@ namespace LineComparisionProblems
          private double LengthOfLine;
         public FindLength(int x1, int x2, int y1, int y2)
         {
-            this.x1 = x1;
-            this.x2 = x2;
-            this.y1 = y1;
-            this.y2 = y2;
+                this.x1 = x1;
+                this.x2 = x2;
+                this.y1 = y1;
+                this.y2 = y2;
         }
 
         public override double Length()
         {
-            LengthOfLine = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-            return LengthOfLine;
+            try
+            {
+                LengthOfLine = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+                return LengthOfLine;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error: Length of line calculation");
+            }
+            return 0;
         }
     }
 }

@@ -10,9 +10,15 @@ namespace LineComparisionProblems
     /// <param name="args"></param>
         static void Main(string[] args)
         {
-            LineComparing lineComparing = new LineComparing();
-            lineComparing.CompareLines();
-            
+            try
+            {
+                LineComparing lineComparing = new LineComparing();
+                lineComparing.CompareLines();
+            }
+            catch(Exception )
+            {
+                Console.WriteLine("Main program, Something went wrong!!");
+            } 
         }
     }
 }
