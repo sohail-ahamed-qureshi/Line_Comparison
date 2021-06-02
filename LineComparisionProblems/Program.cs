@@ -4,14 +4,13 @@ namespace LineComparisionProblems
 {
     class Program
     {/// <summary>
-    /// creating two objects of class to pass two diffrent lines.
+    /// Compare line lenghts and check line is greater/lesser/equal to other.
     /// </summary>
     /// <param name="args"></param>
         static void Main(string[] args)
         {
             LineComparing lineComparing = new LineComparing();
             lineComparing.CompareLines();
-            
         }
     }
 }
