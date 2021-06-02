@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace LineComparisionProblems
-{
-    class LineComparing
+{/// <summary>
+/// data abstraction 
+/// </summary>
+    abstract class LineComparingAbstract
+    {
+        public abstract void CompareLines();
+    }
+    class LineComparing : LineComparingAbstract
     {/// <summary>
-     /// Comparing 2 lines and displaying message if equals/greater than/lesser than each other.
+     /// Comparing 2 lines and displaying message if equals
      /// </summary>
-        public void CompareLines()
+        private double LengthOfLine1, LengthOfLine2;
+        public override void CompareLines()
         {
             FindLength findLength1 = new FindLength(-7, 17, -4, 6);
             FindLength findLength2 = new FindLength(-7, 17, -4, 2);
-            double LengthOfLine1 = findLength1.Length();
-            double LengthOfLine2 = findLength2.Length();
+            LengthOfLine1 = findLength1.Length();
+            LengthOfLine2 = findLength2.Length();
             Compare2Lengths(LengthOfLine1, LengthOfLine2);
         }
         private void Compare2Lengths(double LengthOfLine1, double LengthOfLine2)
