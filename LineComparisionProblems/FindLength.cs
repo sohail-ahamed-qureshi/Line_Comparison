@@ -6,7 +6,7 @@ namespace LineComparisionProblems
 {
     class FindLength
     {/// <summary>
-    /// UC1 - solving for Length 
+    /// UC2 - After Solving length of line checking if lines are Equal.
     /// length of a line = sqrt(x2 - x1)^2 + (y2 + y1)^2;
     /// </summary>
         readonly private int x1, x2, y1, y2;
